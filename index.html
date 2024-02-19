@@ -75,7 +75,33 @@
             </div>
             <div class="featured-text-btn">
                 
-                <button class='glowing-btn'><span class='glowing-txt'>R<span class='faulty-letter'>E</span>SUME</span></button>
+               
+                <body>
+                    <button class='glowing-btn' onclick="downloadResume()">Resume</button>
+                  
+                    <script>
+                      function downloadResume() {
+                        // Replace this link with the actual link to your resume PDF file
+                        var resumeLink = 'Pranesan-s-FlowCV-Resume-20240131.pdf';
+                  
+                        // Create an anchor element
+                        var link = document.createElement('a');
+                        link.href = resumeLink;
+                  
+                        // Set the download attribute to force download
+                        link.download = 'Pranesan-s-FlowCV-Resume.pdf';
+                  
+                        // Append the link to the body
+                        document.body.appendChild(link);
+                  
+                        // Trigger the click event to start the download
+                        link.click();
+                  
+                        // Remove the link from the body
+                        document.body.removeChild(link);
+                      }
+                    </script>
+                  </body>
             </div>
             <div class="social_icons">
                 <a href="https://github.com/your-github-username" target="_blank">
